@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.sang.mapper.EmpAdvMapper">
+    <select id="findAppraiseByEid" resultType="org.sang.bean.Appraise">
+        select * from appraise where eid=#{eid}
+    </select>
+
+    <select id="findTrainByEid" resultType="org.sang.bean.EmpTrain">
+        select * from employeetrain where eid=#{eid}
+    </select>
+
+    <select id="findEmpEcByEid" resultType="org.sang.bean.EmpEc">
+        select * from employeeec where eid=#{eid}
+    </select>
+
+    <select id="findMoveByEid" resultType="org.sang.bean.EmpMove">
+        select * from employeeremove where eid=#{eid}
+    </select>
+
+
+</mapper>

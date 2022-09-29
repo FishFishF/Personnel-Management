@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.sang.mapper.AppraiseMapper">
+    <insert id="addAppraise" parameterType="org.sang.bean.Appraise">
+    insert into appraise(eid,name,appDate,appResult,appContent,remark)
+    values (#{appraise.eid},#{appraise.name},#{appraise.appDate},#{appraise.appResult},#{appraise.appContent},#{appraise.remark});
+    </insert>
+
+
+    <select id="getAllApprise" resultType="org.sang.bean.Appraise">
+        select * from appraise
+    </select>
+
+    <delete id="deleteAppraise">
+        delete from appraise where id=#{id}
+    </delete>
+
+    <select id="findAppraiseByid" resultType="org.sang.bean.Appraise">
+        select * from appraise where id=#{id}
+    </select>
+
+
+</mapper>

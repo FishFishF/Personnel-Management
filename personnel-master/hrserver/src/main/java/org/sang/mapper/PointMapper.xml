@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.sang.mapper.PointMapper">
+    <insert id="formPoint" parameterType="org.sang.bean.Point">
+        insert into point set eid=#{eid},name=#{name},points=0
+    </insert>
+
+    <update id="updatePoint" parameterType="org.sang.bean.Point">
+        update point set points=#{point} where eid=#{eid}
+    </update>
+
+    <select id="findPointsByEid" resultType="java.lang.Integer">
+        select points from point where eid=#{eid}
+    </select>
+
+    <select id="getAllPoint" resultType="org.sang.bean.Point">
+        select * from point
+    </select>
+
+    <select id="getPointDanger" resultType="org.sang.bean.Point">
+        select * from point where points &lt; 0
+    </select>
+</mapper>

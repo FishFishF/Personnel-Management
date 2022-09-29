@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.sang.mapper.ResetMapper">
+    <update id="resetAppraise">
+        truncate table appraise
+    </update>
+
+    <update id="resetEmpolyee">
+        truncate table employee
+    </update>
+
+    <update id="resetEmployeeremove">
+        truncate table employeeremove
+    </update>
+
+    <update id="resetEmployeeec">
+        truncate table employeeec
+    </update>
+
+    <update id="resetEmployeeTrain">
+        truncate table employeetrain
+    </update>
+
+    <update id="resetEmpSalary">
+        truncate table empsalary
+    </update>
+
+    <update id="resetPoint">
+        truncate table point
+    </update>
+
+    <update id="resetAdjustSalary">
+        truncate table adjustsalary
+    </update>
+
+    <update id="resetDanger">
+        truncate table danger
+    </update>
+
+
+
+</mapper>
